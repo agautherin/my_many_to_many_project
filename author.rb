@@ -31,6 +31,16 @@ class Author
         BookAuthor.new(Book.new(title, pages, genre), self)
     end
 
+    def fun_saying
+
+        if self.pen_name 
+            "Hi, my name is #{self.name}, my pen name is #{self.pen_name}.  I have written #{self.pages_written.to_s} pages."
+        else
+            "Hi, my name is #{self.name}, and I do not have a pen name.  I have written #{self.pages_written.to_s} pages."
+        end
+        
+    end
+
     def self.all
         @@all
     end

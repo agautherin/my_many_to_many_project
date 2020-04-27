@@ -13,11 +13,11 @@ hobbit = Book.new("The Hobbit", 200, "fantasy")
 green_eggs = Book.new("Green Eggs & Ham", 25, "non-fiction")
 
 ba1 = BookAuthor.new(harry_potter, jk_rowling)
-ba2 = BookAuthor.new(tolkein, hobbit)
-ba3 = BookAuthor.new(dr_seuss, green_eggs)
+ba2 = BookAuthor.new(hobbit, tolkein)
+ba3 = BookAuthor.new(green_eggs, dr_seuss)
 
 jk_rowling.write_book("Harry Potter 2", 500, "adventure")
 jk_rowling.write_book("Harry Potter 3", 600, "adventure")
 
 # pp Author.all
-pp Book.top_genre
+pp tolkein.fun_saying
