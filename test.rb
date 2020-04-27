@@ -31,7 +31,7 @@ harry3 = jk_rowling.write_book("Harry Potter 3", 600, "adventure")
 # pp harry2.genre
 # pp harry3.genre
 
-pp Book.top_genre
+pp Author.all
 
 
 

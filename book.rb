@@ -11,7 +11,7 @@ class Book
         @@all << self
     end
 
-    def author=(author)
+    def add_author(author)
         BookAuthor.new(self, author)
     end
 

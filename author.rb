@@ -3,11 +3,11 @@ class Author
     attr_accessor
     attr_reader :name, :pen_name
     @@all = []
-
+    
     def initialize(name, pen_name = nil)
         @name = name
         @pen_name = pen_name
-        @@all << []
+        @@all << self
     end
 
     def books
@@ -18,6 +18,7 @@ class Author
             ba.book
         end
     end
+
 
     def pages_written
         self.books.inject(0) {|total, book|  total += book.pages}
