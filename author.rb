@@ -20,7 +20,7 @@ class Author
     end
 
     def pages_written
-        self.books.sum {|book| book.pages}
+        self.books.inject(0) {|total, book|  total += book.pages}
     end
 
     def book=(book)
@@ -28,7 +28,9 @@ class Author
     end
 
     def write_book(title, pages, genre)
-        BookAuthor.new(Book.new(title, pages, genre), self)
+        book = Book.new(title, pages, genre)
+        BookAuthor.new(book, self)
+        return book
     end
 
     def fun_saying

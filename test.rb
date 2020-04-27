@@ -1,6 +1,7 @@
 require_relative "./author.rb"
 require_relative "./book.rb"
 require_relative "./bookauthor.rb"
+require_relative "./genre.rb"
 require 'pry'
 
 
@@ -16,8 +17,21 @@ ba1 = BookAuthor.new(harry_potter, jk_rowling)
 ba2 = BookAuthor.new(hobbit, tolkein)
 ba3 = BookAuthor.new(green_eggs, dr_seuss)
 
-jk_rowling.write_book("Harry Potter 2", 500, "adventure")
-jk_rowling.write_book("Harry Potter 3", 600, "adventure")
+harry2 = jk_rowling.write_book("Harry Potter 2", 500, "adventure")
+harry3 = jk_rowling.write_book("Harry Potter 3", 600, "adventure")
+
+# pp jk_rowling.pages_written
 
 # pp Author.all
-pp tolkein.fun_saying
+#pp tolkein.fun_saying
+
+# harry2 = Book.new("Harry Potter 2", 500, "adventure")
+# harry3 = Book.new("Harry Potter 3", 600, "adventure")
+
+# pp harry2.genre
+# pp harry3.genre
+
+pp Book.top_genre
+
+
+

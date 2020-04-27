@@ -7,7 +7,7 @@ class Book
     def initialize(title, pages, genre)
         @title = title
         @pages = pages
-        @genre = genre
+        @genre = Genre.new_genre(genre)
         @@all << self
     end
 
