@@ -19,6 +19,18 @@ class Author
         end
     end
 
+    def pages_written
+        self.books.sum {|book| book.pages}
+    end
+
+    def book=(book)
+        BookAuthor.new(book, self)
+    end
+
+    def write_book(title, pages, genre)
+        BookAuthor.new(Book.new(title, pages, genre), self)
+    end
+
     def self.all
         @@all
     end

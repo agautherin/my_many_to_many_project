@@ -16,10 +16,8 @@ ba1 = BookAuthor.new(harry_potter, jk_rowling)
 ba2 = BookAuthor.new(tolkein, hobbit)
 ba3 = BookAuthor.new(dr_seuss, green_eggs)
 
+jk_rowling.write_book("Harry Potter 2", 500, "adventure")
+jk_rowling.write_book("Harry Potter 3", 600, "adventure")
+
 # pp Author.all
-
-# pp jk_rowling.books
-
-
-
-pp harry_potter.authors
+pp Book.top_genre

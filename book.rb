@@ -15,6 +15,15 @@ class Book
         BookAuthor.new(self, author)
     end
 
+    def self.longest_book
+        self.all.max_by {|book| book.pages}
+    end
+
+    def self.top_genre
+        hash = Hash.new(0)
+        self.all.each {|book| hash[book.genre] += 1}
+        hash.max_by {|k, v| v}
+    end
 
     def authors
         author = BookAuthor.all.select do |ba|
