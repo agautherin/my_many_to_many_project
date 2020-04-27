@@ -1,6 +1,5 @@
 class Book
 
-    attr_accessor
     attr_reader :title, :pages, :genre
     @@all = []
 

@@ -1,6 +1,5 @@
 class Author
 
-    attr_accessor
     attr_reader :name, :pen_name
     @@all = []
     
@@ -19,6 +18,9 @@ class Author
         end
     end
 
+    def genres
+        self.books.map {|book| book.genre}.uniq
+    end
 
     def pages_written
         self.books.inject(0) {|total, book|  total += book.pages}

@@ -25,13 +25,13 @@ harry3 = jk_rowling.write_book("Harry Potter 3", 600, "adventure")
 # pp Author.all
 #pp tolkein.fun_saying
 
-# harry2 = Book.new("Harry Potter 2", 500, "adventure")
-# harry3 = Book.new("Harry Potter 3", 600, "adventure")
+harry2 = Book.new("Harry Potter 2", 500, "adventure")
+harry3 = Book.new("Harry Potter 3", 600, "adventure")
 
 # pp harry2.genre
 # pp harry3.genre
 
-pp Author.all
+pp jk_rowling.genres
 
 
 
